@@ -7,5 +7,5 @@ module.exports = {
     languages: [
         {name: 'javascript', label: 'Javascript'},
     ],
-    theme: "default"
+    theme: "default",
 }
