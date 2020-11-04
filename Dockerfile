@@ -1,21 +1,19 @@
-# Shekal Documentation Framework using Plate
+# MDoc Documentation Framework
 FROM node:14-alpine
 
-ENV NODE_ENV=development
-
+# Setup workdir
 WORKDIR /usr/src/app
 
 # Copy source
-COPY documentation/src/package*.json ./
+COPY src/package*.json ./
 
-# Install paclages
+# Install packages
 RUN npm install
 
 # Copy source
-COPY documentation/src ./
+COPY src ./
 
-#COPY source/apis/documentation ./document/apis
-#COPY source/webapp/documentation ./document/webapp
+# Expose port for webserver
+EXPOSE 5000
 
-EXPOSE 8888
 CMD ["npm", "run", "start"]

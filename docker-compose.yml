@@ -14,5 +14,5 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - './documentation/src:/usr/src/app'
+      - './src:/usr/src/app'
       - '/usr/src/app/node_modules'

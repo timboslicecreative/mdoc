@@ -1,2 +1,22 @@
-**/node_modules
-**/build
+### Project
+**/.DS_Store
+.idea/
+**/README*
+
+### Development Sources
+**/node_modules/
+
+### Project Sources
+**/.git*
+**/.git
+**/.gitlab
+**/.gitlab-ci.yml
+**/.source
+**/Dockerfile*
+**/.dockerignore*
+**/docker-compose.*
+**/*.env
+
+### Log Files
+**/logs
+**/*.log

@@ -3,7 +3,7 @@ module.exports = {
     title: 'MDoc',
     documentsPath: 'documents',
     titlePrefix: "",
-    titleSuffix: 'Shekal Documentation',
+    titleSuffix: 'MDoc - Documentation Framework',
     languages: [
         {name: 'javascript', label: 'Javascript'},
     ],
