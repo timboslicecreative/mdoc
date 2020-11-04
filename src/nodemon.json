@@ -1,0 +1,11 @@
+{
+  "verbose": false,
+  "watch": [
+    "*.js",
+    "lib/**/*.js",
+    "**/*.md"
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

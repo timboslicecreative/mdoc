@@ -1,0 +1,19 @@
+<div id="code">
+    <div id="language-selector">
+        <label for="input-language">Showing</label>
+        <label id="select-language" class="select-language"><select class="input-language">
+            {{#each languages}}
+                <option value="{{name}}"{{#if default}} selected{{/if}}>{{label}}</option>
+            {{/each}}
+        </select></label>
+    </div>
+</div>
+<div class="content" id="content">
+    {{#each documents}}
+        <article id="{{name}}">
+            {{{html}}}
+        </article>
+    {{/each}}
+</div>
+
+

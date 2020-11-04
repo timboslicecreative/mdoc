@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>{{titlePrefix}}{{titleSuffix}}</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
+    <link href="css/layout.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="css/theme/{{theme}}-{{#if darkMode}}dark{{else}}light{{/if}}.css" rel="stylesheet" type="text/css"
+          media="screen"/>
+    <link href="css/highlight/{{highlightTheme}}-{{#if darkMode}}dark{{else}}light{{/if}}.css" rel="stylesheet"
+          type="text/css"/>
+    <script>const supportedLanguages = [{{#each languages}}'{{name}}',{{/each}}]</script>
+</head>
+<body class="index">
+<div id="nav">
+    <div class="header">
+        {{#if logo}}<img src="img/{{logo}}" class="logo"/>{{/if}}
+        {{#if title}}<h1>{{title}}</h1>{{/if}}
+    </div>
+    <div class="search">
+        <input type="text" id="input-search" name="search" placeholder="Search">
+        <ul class="results"></ul>
+    </div>
+    <a id="active-heading-display">{{title}}</a>
+    <div class="toc">
+        {{#each documents}}
+            {{{toc headings}}}
+        {{/each}}
+    </div>
+    <div class="footer"></div>
+</div>
+<main>
+    {{{body}}}
+</main>
+</body>
+<script src="js/clipboard.min.js"></script>
+<script src="js/main.js"></script>
+</html>

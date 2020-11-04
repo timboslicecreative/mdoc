@@ -1,0 +1,147 @@
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+main {
+
+}
+
+a,
+a:link,
+a:active {
+    color: #222;
+}
+
+a:visited {
+}
+
+/*
+Navigation / TOC / Search
+ */
+
+#nav {
+}
+
+#nav .header {
+}
+
+#nav .header .logo {
+}
+
+#nav .search {
+}
+
+#input-search {
+    background-image: url('/icons/search-black.svg');
+    border-color: #666;
+    background-color: transparent;
+}
+
+#nav .search .results {
+}
+
+#nav .search .results.visible {
+}
+
+#nav .search .results li {
+}
+
+#nav .search .results a {
+    text-decoration: none
+}
+
+#nav .search .results a:hover {
+    text-decoration: underline
+}
+
+.toc {
+}
+
+.toc-list {
+}
+
+.toc-list-item a {
+}
+
+.toc-list-item .active a {
+}
+
+/*
+Content / Documentation
+ */
+
+#content {
+}
+
+#content pre {
+    background-color: #fbfbfb;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+#content pre:before {
+    background-color: #eee;
+}
+
+#content pre option {
+    color: initial;
+}
+
+/*
+Code / Blockquotes
+ */
+
+.code-block {
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+#code {
+}
+
+#language-selector {
+    background: #ddd;
+}
+
+button.copy {
+    background-image: url('/icons/content_copy-black.svg');
+    transition: background-color 1s;
+}
+
+button.copy:hover {
+    background-color: #ddd;
+}
+
+.select-language {
+    background-color: transparent;
+    transition: background-color 1s;
+}
+
+.select-language:hover {
+    background-color: #ddd;
+}
+
+.flash {
+    animation-name: animate-flash;
+    animation-duration: 1s;
+}
+
+@keyframes animate-flash {
+    0% {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    25% {
+        background-color: rgba(255, 0, 0, .2);
+    }
+    100% {
+        background-color: rgba(255, 0, 0, 0);
+    }
+}
+
+
+@media (max-width: 1024px) {
+}
