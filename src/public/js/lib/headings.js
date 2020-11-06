@@ -16,7 +16,7 @@ export default class Headings {
         this.headings = Array.from(document.querySelectorAll('h1, h2, h3'));
         this.calculatePositions();
         window.addEventListener('scroll', this.headingFromScroll.bind(this));
-        eventEnd(window, 'scroll', this.setHistory, 300);
+        eventEnd(window, 'scroll', this.setHistory.bind(this), 400);
     }
 
     position() {
