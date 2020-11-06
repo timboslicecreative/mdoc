@@ -1,7 +1,7 @@
-import {eventEnd} from './utils';
-import Layout from './layout';
-import Code from './code';
-import Headings from './headings';
+import {eventEnd} from './lib/utils';
+import Layout from './lib/layout';
+import Code from './lib/code';
+import Headings from './lib/headings';
 
 const toggleNav = () => {
     let nav = document.querySelector('#nav');
