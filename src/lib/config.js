@@ -10,8 +10,8 @@ const defaultConfig = {
         {name: 'java', label: 'Java'},
         {name: 'javascript', label: 'Javascript'}
     ],
-    theme: 'default',
-    highlightTheme: 'solarized',
+    theme: ['default-light', 'default-dark'],
+    highlightTheme: ['solarized-dark', 'solarized-light'],
     darkMode: false,
     showdown: {
         tables: true,

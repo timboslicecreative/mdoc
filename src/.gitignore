@@ -1,23 +1,5 @@
-*.gem
-*.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
+.idea/
+node_modules/
 *.DS_STORE
 build/
-.cache
-
-# YARD artifacts
-.yardoc
-_yardoc
-doc/
-.idea/
-node_modules
+public/**/*bundle.js

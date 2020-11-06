@@ -77,18 +77,43 @@ Content / Documentation
 }
 
 #content pre {
-    background-color: #fbfbfb;
-    border: 1px solid #eee;
-    border-radius: 3px;
 }
 
-#content pre:before {
-    background-color: #eee;
+
+
+
+
+
+
+button.copy {
+    background-image: url('/icons/content_copy-white.svg');
+    transition: background-color 1s;
+}
+button.copy:hover {
+    background-color: rgba(255,255,255,.2);
 }
 
-#content pre option {
-    color: initial;
+.select-language {
+    background-image: url('/icons/unfold_more-white.svg');
 }
+
+.select-language {
+    background-color: transparent;
+    transition: background-color 1s;
+}
+
+.select-language .input-language {
+    color: #fff;
+}
+
+.language-label {
+    color: #fff;
+}
+
+.select-language:hover {
+    background-color: rgba(255,255,255,.2);
+}
+
 
 /*
 Code / Blockquotes
@@ -107,38 +132,19 @@ Code / Blockquotes
     background: #ddd;
 }
 
-button.copy {
-    background-image: url('/icons/content_copy-black.svg');
-    transition: background-color 1s;
-}
-
-button.copy:hover {
-    background-color: #ddd;
-}
-
-.select-language {
-    background-color: transparent;
-    transition: background-color 1s;
-}
-
-.select-language:hover {
-    background-color: #ddd;
-}
 
 .flash {
     animation-name: animate-flash;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
 }
 
 @keyframes animate-flash {
     0% {
-        background-color: rgba(255, 0, 0, 0);
     }
     25% {
-        background-color: rgba(255, 0, 0, .2);
+        background-color: rgba(255, 255, 255, .2);
     }
     100% {
-        background-color: rgba(255, 0, 0, 0);
     }
 }
 

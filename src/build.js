@@ -18,7 +18,7 @@ const DOCUMENTS_PATH = path.join(__dirname, config.documentsPath || 'documents')
 // GO!
 const pathOptions = {
     templatePath: './views',
-    outputPath:  './build/html/',
+    outputPath:  './build/',
 };
 
 const views = ['index'];

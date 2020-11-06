@@ -3,18 +3,21 @@
   "version": "2.0.2",
   "description": "Shekal Documentation",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "webpack --config webpack.config.dev.js & nodemon server.js",
     "start": "node server.js",
-    "build": "node build.js",
+    "build": "node build.js & webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "clipboard": "^2.0.6",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "showdown": "^1.9.1",
-    "showdown-highlight": "^2.1.5"
+    "showdown-highlight": "^2.1.5",
+    "webpack": "^5.4.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "webpack-cli": "^4.2.0"
   }
 }

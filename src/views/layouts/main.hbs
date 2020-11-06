@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
     <link href="css/layout.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="css/theme/{{theme}}-{{#if darkMode}}dark{{else}}light{{/if}}.css" rel="stylesheet" type="text/css"
+    <link href="css/theme/{{theme.[0]}}.css" rel="stylesheet" type="text/css"
           media="screen"/>
-    <link href="css/highlight/{{highlightTheme}}-{{#if darkMode}}dark{{else}}light{{/if}}.css" rel="stylesheet"
+    <link href="css/highlight/{{highlightTheme.[0]}}.css" rel="stylesheet"
           type="text/css"/>
-    <script>const supportedLanguages = [{{#each languages}}'{{name}}',{{/each}}]</script>
+    <script>
+        window.supportedLanguages = [
+            {{#each languages}}{name:'{{name}}',label:'{{label}}'},{{/each}}
+        ];
+    </script>
 </head>
 <body class="index">
 <div id="nav">
@@ -34,6 +38,5 @@
     {{{body}}}
 </main>
 </body>
-<script src="js/clipboard.min.js"></script>
-<script src="js/main.js"></script>
+<script type="module" src="js/index.bundle.js"></script>
 </html>

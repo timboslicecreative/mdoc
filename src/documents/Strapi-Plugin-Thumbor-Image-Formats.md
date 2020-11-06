@@ -51,6 +51,14 @@ strapi-plugin-thumbor-image-formats create-overrides
 
 Manually create `upload.js` in `extensions/upload/services/` exporting the plugin's upload services.
 
+```python
+my_var = 'this'
+```
+
+```python
+next _var = 'that'
+```
+
 ```javascript
 // upload.js
 

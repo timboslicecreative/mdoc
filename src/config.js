@@ -7,5 +7,6 @@ module.exports = {
     languages: [
         {name: 'javascript', label: 'Javascript'},
     ],
-    theme: "default",
+    theme: ['default-light', 'default-dark'],
+    highlightTheme: ['solarized-dark', 'solarized-light'],
 }

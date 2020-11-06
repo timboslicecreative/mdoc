@@ -181,8 +181,6 @@ textarea {
     -moz-hyphens: auto;
     hyphens: auto;
     padding: 3px;
-    border-radius: var(--border-radius-default);
-    background: #f7f7f7;
 }
 
 #nav .toc-footer {
@@ -550,29 +548,33 @@ main {
 button.copy {
     outline: none;
     border: none;
-    width: var(--code-header-size);
-    height: var(--code-header-size);
+    width: calc(var(--code-header-size) - 6px);
+    height: calc(var(--code-header-size) - 6px);
     background-color: transparent;
-    border-radius: var(--border-radius-default) 0 0 var(--border-radius-default);
+    border-radius: var(--border-radius-default);
     background-image: url('/icons/content_copy-black.svg');
     background-repeat: no-repeat;
     background-size: auto 12px;
     background-position: 50% 50%;
     z-index: 2;
+    margin: 3px 0 3px 1px;
 }
 
 .select-language {
     display: inline-block;
     vertical-align: middle;
     box-sizing: border-box;
-    height: var(--code-header-size);
-    line-height: var(--code-header-size);
-    padding: 5px 6px 4px 18px;
+    height: calc(var(--code-header-size) - 6px);
+    line-height: calc(var(--code-header-size) - 6px);
+    border-radius: var(--border-radius-default);
+    padding: 0 6px 0 18px;
     background-image: url('/icons/unfold_more-black.svg');
     background-repeat: no-repeat;
     background-size: auto 15px;
     background-position: 2px 50%;
     white-space: unset;
+    margin: 3px 0 3px 1px;
+    cursor: pointer;
 }
 
 .select-language .input-language {
@@ -589,17 +591,19 @@ button.copy {
     text-align: left;
     text-align-last: left;
     font-size: 12px;
-    line-height: 20px;
+    height: calc(var(--code-header-size) - 6px);
+    line-height: calc(var(--code-header-size) - 6px);
 }
 
 .language-label {
     display: inline-block;
     vertical-align: middle;
     box-sizing: border-box;
-    height: 28px;
-    line-height: 20px;
-    padding: 4px 6px 4px 2px;
+    height: calc(var(--code-header-size) - 6px);
+    line-height: calc(var(--code-header-size) - 6px);
+    padding: 0 6px 0 2px;
     text-transform: capitalize;
+    margin: 3px;
 }
 
 #content section .code-block {
@@ -637,7 +641,7 @@ button.copy {
     width: 100%;
     box-sizing: border-box;
     position: relative;
-    padding: var(--code-header-size) var(--padding-small) var(--font-size-default) var(--padding-small);
+    /*padding: var(--code-header-size) 0 0 0;*/
 }
 
 #content pre:last-child {
@@ -649,9 +653,8 @@ button.copy {
 }
 
 #content pre > code {
+    padding: calc(var(--code-header-size) + var(--font-size-default)) var(--padding-small) var(--padding-small) var(--padding-small);
     border-radius: var(--border-radius-default);
-    background-color: transparent;
-    padding: var(--font-size-default) 0 0 0;
 }
 
 #content pre:before {
@@ -662,21 +665,19 @@ button.copy {
     width: 100%;
     height: var(--code-header-size);
     z-index: 1;
-    border-radius: var(--border-radius-default) var(--border-radius-default) 0 0;
 }
 
 #content pre button.copy {
     position: absolute;
-    top: -1px;
-    left: -1px;
+    top: 0px;
+    left: 2px;
     z-index: 2;
 }
 
 #content pre .select-language {
     position: absolute;
-    top: -1px;
-    left: var(--code-header-size);
-    margin: 0;
+    top: 0px;
+    left: calc(var(--code-header-size) - 2px);
     z-index: 3;
 }
 
@@ -684,7 +685,6 @@ button.copy {
     position: absolute;
     top: 0;
     left: var(--code-header-size);
-    margin: 0;
     z-index: 3;
 }
 
