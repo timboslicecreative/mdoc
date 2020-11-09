@@ -9,4 +9,5 @@ module.exports = {
     ],
     theme: ['default-light', 'default-dark'],
     highlightTheme: ['solarized-dark', 'solarized-light'],
+    buildDir: 'build'
 }

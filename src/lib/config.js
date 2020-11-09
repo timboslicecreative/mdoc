@@ -17,7 +17,8 @@ const defaultConfig = {
         tables: true,
         metadata: true,
         parseImgDimensions: true,
-    }
+    },
+    buildDir: 'build'
 }
 
 

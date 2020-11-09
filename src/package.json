@@ -17,6 +17,7 @@
     "webpack": "^5.4.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^6.3.0",
     "nodemon": "^2.0.6",
     "webpack-cli": "^4.2.0"
   }

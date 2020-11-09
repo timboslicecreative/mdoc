@@ -18,12 +18,12 @@ const DOCUMENTS_PATH = path.join(__dirname, config.documentsPath || 'documents')
 // GO!
 const pathOptions = {
     templatePath: './views',
-    outputPath:  './build/',
+    outputPath: './build/',
 };
 
 const views = ['index'];
 
-const outputTemplates = async function(views, options = {}){
+const outputTemplates = async function (views, options = {}) {
     console.log('Output Templates: ', views, options)
 
     if (!options.templatePath) return console.log('no templatePath provided');
@@ -31,7 +31,7 @@ const outputTemplates = async function(views, options = {}){
 
     let documents = await getDocuments(DOCUMENTS_PATH);
 
-    function buildTemplate(view){
+    function buildTemplate(view) {
         console.log('Building Template:', view);
 
         let templateFile = path.join(__dirname, options.templatePath, view + '.hbs');
@@ -42,13 +42,12 @@ const outputTemplates = async function(views, options = {}){
             ...config
         }
 
-        hbs.renderView(templateFile, data, function(error, hbsTemplate){
+        hbs.renderView(templateFile, data, function (error, hbsTemplate) {
             if (error) return console.log('Error rendering ' + templateFile, error);
-            fs.writeFile(outputFile, hbsTemplate, function(err) {
-                if(err) {
+            fs.writeFile(outputFile, hbsTemplate, function (err) {
+                if (err) {
                     return console.log('error writing file' + outputFile, err);
-                }
-                else {
+                } else {
                     console.log('Output:' + outputFile);
                 }
             });
@@ -58,6 +57,23 @@ const outputTemplates = async function(views, options = {}){
     views.forEach(v => buildTemplate(v));
 };
 
+
+const outputStyles = () => {
+    const {theme, highlightTheme} = config;
+    const publicPath = path.join(__dirname, 'public');
+    // static assets
+    const staticAssets = ['icons', 'img'].map(a => path.join(publicPath, a));
+    // layout and theme css files
+    const cssAssets = [
+        path.join(publicPath, 'css', 'print'),
+        path.join(publicPath, 'css', 'layout'),
+        ...theme.map(c => path.join(publicPath, 'css', 'theme', c)),
+        ...highlightTheme.map(c => path.join(publicPath, 'css', 'highlight', c))
+    ];
+
+
+
+}
 
 // Start
 (async () => {
